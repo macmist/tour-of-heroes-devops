@@ -19,6 +19,7 @@ export class HeroDetailComponent implements OnInit {
     private route: ActivatedRoute,
     private location: Location
   ) {}
+
   ngOnInit(): void {
     this.route.params
       .switchMap((params: Params) => this.heroService.getHero(+params['id']))
