@@ -6,7 +6,8 @@
     "lite": "lite-server",
     "tsc": "tsc",
     "tsc:w": "tsc -w",
-    "lint": "tslint app/*.ts"
+    "lint": "tslint app/*.ts",
+    "precommit-msg": "echo 'Pre-commit checks...' && exit 0"
   },
   "keywords": [],
   "author": "",
@@ -53,6 +54,7 @@
   },
   "repository": {},
   "pre-commit": [
+    "precommit-msg",
     "lint"
   ]
 }
