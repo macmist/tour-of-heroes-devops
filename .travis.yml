@@ -1,22 +1,17 @@
 sudo: required
-
 services:
-  - docker
-
-# to install docker compose (not working correctly with curl)
+- docker
 language: python
-
 python:
-  - "3.5"
-
+- '3.5'
 env:
   DOCKER_COMPOSE_VERSION: 1.10.0
-
 install:
-  - pip install -U docker-compose
-  - sudo chmod +x /usr/local/bin/docker-compose
-
-
+- pip install -U docker-compose
+- sudo chmod +x /usr/local/bin/docker-compose
 script:
-  - docker-compose up -d
-
+- docker-compose up -d
+notifications:
+  slack:
+    rooms:
+      secure: e9duDdrqU3+s4Ebg7xRwhTwYJMsb1+SvfKKlpJpSKAmBju1oelueawxSkpDKbe2Yy7scB6BoEWrjsX0ZTE7cEOzduQfRazveRJDPomu8W/IbMAckEqPqcGFpJbyTsHv5JRO6GzPzUrutOA8FQ3wMWnoLFspVEATWutsytRbOschUjgoCBRJx6iQRD/VvZs7F7dzGyTZNo32Syeo3nQTGH0BSBAOyE9TfH/Cb777OpPt/KsyMpQJVO2T8OE9gTa6OzGL4ao2HL0aQgcom9N3IBgtRvVhiGihhAaPOucgZW1uF9BvzpNgwc1uGvYkTZ9mijRP7l/xaLjNbfNf1pb3DnlNIk7Ko+ex+7e//eS1XO9CHQyD2r3d22J0eRaVWv+Gdm78f1zzzFCG2y9E+50Eqt9gkecMrxRs+lMCljgfwbZQ9KODcyeELYlEzN+O5OsyXH1Uc+1LSzyfArkjfxPs4BsmZn1G2ydJDpNyTijVZJR0AscrK4GM9Vmvvw79t7pQmfcdNdOIUCYwTzQlcPBRmV/0nvMv5CYZu0RomnqYbu4WJXZhX52pqCIJ7IxfPqwD9Bje5CKblT86KJ+KjeA+I2+1g5oyjxumfDXcqlbOGButW29qnGE8LbzE1XRn+r1hP69lPEKRAyYMKBi2k4dJDAQymDXoukzdZQltXlMFPhYA=
