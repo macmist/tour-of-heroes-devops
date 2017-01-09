@@ -9,6 +9,7 @@ WORKDIR /usr/src/app/
 # Copy the 'package.json' needed by NPM in the current directory to the 'WORKDIR' of the container.
 COPY package.json /usr/src/app/
 
+
 # Run the basic command to install node and it's dependancy.
 RUN npm install
 
