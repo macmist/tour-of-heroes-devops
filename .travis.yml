@@ -11,7 +11,7 @@ install:
 - sudo chmod +x /usr/local/bin/docker-compose
 script:
 - docker-compose up -d
-- mocha
+- docker-compose run angular npm test
 notifications:
   slack:
     rooms:
