@@ -27,6 +27,7 @@
     "ng2-bootstrap": "^1.1.16",
     "pre-commit": "^1.2.2",
     "reflect-metadata": "^0.1.8",
+    "request": "^2.79.0",
     "rxjs": "5.0.0-rc.4",
     "systemjs": "0.19.40",
     "tslint": "^3.15.1",
@@ -51,7 +52,9 @@
     "rimraf": "^2.5.4",
     "@types/node": "^6.0.46",
     "@types/jasmine": "^2.5.36",
-    "@types/selenium-webdriver": "^2.53.33"
+    "@types/selenium-webdriver": "^2.53.33",
+    "chai": "^3.5.0",
+    "chai-http": "^2.0.1"
   },
   "repository": {},
   "pre-commit": [

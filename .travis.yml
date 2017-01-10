@@ -11,6 +11,7 @@ install:
 - sudo chmod +x /usr/local/bin/docker-compose
 script:
 - docker-compose up -d
+- mocha
 notifications:
   slack:
     rooms:
